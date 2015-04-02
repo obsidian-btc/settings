@@ -30,7 +30,7 @@ class Settings
       end
 
       def assignable?(receiver, attribute)
-        receiver.respond_to? setter_name(attribute)
+        receiver.respond_to?(setter_name(attribute), true)
       end
 
       def setter_name(attribute)
